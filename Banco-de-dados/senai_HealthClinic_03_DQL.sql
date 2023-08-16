@@ -1,6 +1,6 @@
 USE HealthClinic_Manha;
 --Consultando dados da consulta e outras tabelas
-SELECT NomeFantasia AS Clinica, CONCAT(NomeMedico,',',TipoEspecialidade) AS [Medico e sua Especialidade], 
+SELECT NomeFantasia AS Clinica, CONCAT(NomeMedico,',',TipoEspecialidade,', CRM/SP-',CRM) AS [Medico], 
 	   NomePaciente AS Paciente, 
 	   DataConsulta AS [Data da Consulta], 
 	   Horario, Descricao, [Status]
@@ -12,7 +12,7 @@ FROM Consulta
 	   INNER JOIN StatusConsulta ON Consulta.IdStatusConsulta = StatusConsulta.IdStatusConsulta
 
 --Consultando dados do prontuario e outras tabelas
-SELECT CONCAT(NomeMedico,',',TipoEspecialidade) AS [Medico e sua Especialidade], 
+SELECT CONCAT(NomeMedico,',',TipoEspecialidade) AS [Medico], 
 	   NomePaciente AS Paciente,
 	   DescricaoProntuario AS [Descricao do Prontuario]
 FROM Prontuario
@@ -21,7 +21,7 @@ FROM Prontuario
 	   LEFT JOIN Paciente		ON Prontuario.IdPaciente = Paciente.IdPaciente
 
 --Consultando dado de comentario e outras tabelas
-SELECT NomeFantasia, NomePaciente AS Paciente ,	
+SELECT NomeFantasia, NomePaciente AS Paciente,	
 	   Comentario.Comentario
 FROM Comentario
 	INNER JOIN Clinica  ON Comentario.IdClinica = Clinica.IdClinica
