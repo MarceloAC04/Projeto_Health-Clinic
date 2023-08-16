@@ -1,3 +1,0 @@
-MODELO CONCEITUAL
-- O modelo conceitual é um diagrama de nível mais abastrato, onde inicialmente idealizamos e identificamos as entidades, 
-  seus atributos e as relações entre si, da aplicação que será desenvolvida 

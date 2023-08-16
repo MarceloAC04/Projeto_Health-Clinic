@@ -27,13 +27,13 @@ INSERT INTO StatusConsulta([Status])
 VALUES ('Concluido'), ('Cancelada'), ('Agendada')
 
 INSERT INTO Consulta(IdClinica, IdMedico, IdPaciente, DataConsulta, Horario, Descricao,  IdStatusConsulta)
-VALUES(1,3,1,'2023-08-11','13:00:00','Consulta de rotina',1),
-	  (1,4,2,'2023-08-16','14:30:00','Sessão de fisioterapia',3)
+VALUES(1,1,1,'2023-08-11','13:00:00','Consulta de rotina',1),
+	  (1,2,2,'2023-08-16','14:30:00','Sessão de fisioterapia',3)
 
 INSERT INTO Prontuario(IdMedico,IdPaciente,DescricaoProntuario)
-VALUES(3,1,'Realizado exames no paciente')
+VALUES(1,1,'Realizado exames no paciente')
 
 INSERT INTO Comentario(IdClinica,IdPaciente,Comentario)
 VALUES(1,1,'Òtimos profissionais e boa estrutura')
 
-SELECT * FROM Comentario;
+SELECT * FROM Medico;
