@@ -36,4 +36,3 @@ VALUES(1,1,'Realizado exames no paciente')
 INSERT INTO Comentario(IdClinica,IdPaciente,Comentario)
 VALUES(1,1,'Òtimos profissionais e boa estrutura')
 
-SELECT * FROM Medico;
