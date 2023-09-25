@@ -23,9 +23,16 @@ namespace apiweb.healthclinc.manha.Domains
         [Column(TypeName = "CHAR(16)")]
         [Required(ErrorMessage = "O Telefone do paciente é obrigatório")]
         public string? Telefone { get; set; }
-        
+
         [Column(TypeName = "CHAR(3)")]
         [Required(ErrorMessage = "A idade do paciente é obrigatória")]
         public string? Idade { get; set; }
+
+        //ref.tabela Usuario
+        [Required(ErrorMessage = "Usuário obrigatório!")]
+        public Guid IdUsuario { get; set; }
+
+        [ForeignKey(nameof(IdUsuario))]
+        public Usuario? Usuario { get; set; }
     }
 }

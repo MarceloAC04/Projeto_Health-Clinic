@@ -80,3 +80,5 @@ C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\obj\
 C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\obj\Debug\net7.0\apiweb.healthclinc.manha.pdb
 C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\obj\Debug\net7.0\apiweb.healthclinc.manha.genruntimeconfig.cache
 C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\obj\Debug\net7.0\ref\apiweb.healthclinc.manha.dll
+C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\bin\Debug\net7.0\apiweb.healthclinc.manha.xml
+C:\Users\48260449846\Desktop\Projeto_Health-Clinic\apiweb.healthclinc.manha\obj\Debug\net7.0\apiweb.healthclinc.manha.xml

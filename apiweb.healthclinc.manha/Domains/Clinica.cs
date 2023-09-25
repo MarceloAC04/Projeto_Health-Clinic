@@ -29,12 +29,12 @@ namespace apiweb.healthclinc.manha.Domains
         [Required(ErrorMessage = "A Razão Social é obrigatória!")]
         public string? RazaoSocial { get; set; }
 
-        [Column(TypeName = "DATE")]
+        [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Informe o horário de abertura da clínica")]
-        public TimeOnly HorarioAbertura { get; set; }
+        public TimeSpan HorarioAbertura { get; set; }
 
-        [Column(TypeName = "DATE")]
+        [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "Informe o horário de encerramento da clínica")]
-        public TimeOnly HorarioEncerramento { get; set; }
+        public TimeSpan HorarioEncerramento { get; set; }
     }
 }

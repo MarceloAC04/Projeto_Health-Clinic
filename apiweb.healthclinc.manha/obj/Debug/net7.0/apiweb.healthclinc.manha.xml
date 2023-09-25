@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>apiweb.healthclinc.manha</name>
+    </assembly>
+    <members>
+        <member name="M:apiweb.healthclinc.manha.Contexts.HealthClinicContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Define as opções de contrusção do banco(String Conexão)
+            </summary>
+            <param name="optionsBuilder">Objeto com as configurações definidas</param>
+        </member>
+        <member name="T:apiweb.healthclinc.manha.Migrations.Bd_V1">
+            <inheritdoc />
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

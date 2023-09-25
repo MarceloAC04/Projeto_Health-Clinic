@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace apiweb.healthclinc.manha.Domains
 {
     [Table(nameof(Medico))]
+    [Index(nameof(CRM), IsUnique = true)]
     public class Medico
     {
         [Key]
