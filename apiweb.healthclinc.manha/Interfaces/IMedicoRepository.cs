@@ -6,10 +6,12 @@ namespace apiweb.healthclinc.manha.Interfaces
     {
         void Cadastrar(Medico medico);
 
-        void Deletar(Medico medico);
+        void Deletar(Guid id);
 
         Medico BuscarPorId(Guid id);
 
         void Atualizar(Guid id, Medico medico);
+
+        List<Medico> Listar();
     }
 }

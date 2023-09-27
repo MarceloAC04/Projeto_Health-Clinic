@@ -2,7 +2,7 @@
 
 namespace apiweb.healthclinc.manha.Interfaces
 {
-    public interface IEspecialidadeRepository
+    public interface ITiposEspecialidadeRepository
     {
         void Cadastrar(TiposEspecialidade tiposEspecialidade);
     }

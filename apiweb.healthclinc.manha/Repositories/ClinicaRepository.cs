@@ -15,6 +15,8 @@ namespace apiweb.healthclinc.manha.Repositories
         public void Cadastrar(Clinica clinica)
         {
             _healthClinicContext.Add(clinica);
+
+            _healthClinicContext.SaveChanges();
         }
     }
 }

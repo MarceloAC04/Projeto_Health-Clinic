@@ -2,7 +2,7 @@
 
 namespace apiweb.healthclinc.manha.Interfaces
 {
-    public interface IStatusConsulta
+    public interface IStatusConsultaRepository
     {
         void Cadastrar(StatusConsulta statusConsulta);
 
