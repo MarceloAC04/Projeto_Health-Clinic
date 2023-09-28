@@ -22,7 +22,7 @@ namespace apiweb.healthclinc.manha.Repositories
                 {
                     medicoBuscado.NomeMedico = medico.NomeMedico;
                     medicoBuscado.CRM = medico.CRM;
-                    medicoBuscado.IdEspecialidade = medico.IdEspecialidade;
+                    medicoBuscado.IdTipoEspecialidade = medico.IdTipoEspecialidade;
 
                 }
 
@@ -65,7 +65,7 @@ namespace apiweb.healthclinc.manha.Repositories
 
                          TipoEspecialidade = new TiposEspecialidade
                          {
-                             IdTipoEspecialidade = m.IdEspecialidade,
+                             IdTipoEspecialidade = m.IdTipoEspecialidade,
                              Especialidade = m.TipoEspecialidade!.Especialidade
                          },
 

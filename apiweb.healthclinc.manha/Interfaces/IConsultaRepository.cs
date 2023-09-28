@@ -1,4 +1,5 @@
 ﻿using apiweb.healthclinc.manha.Domains;
+using apiweb.healthclinc.manha.Repositories;
 
 namespace apiweb.healthclinc.manha.Interfaces
 {
@@ -8,7 +9,9 @@ namespace apiweb.healthclinc.manha.Interfaces
 
         void Deletar(Guid id);
 
-        List<Consulta> ListarMinhas(Guid id);
+        List<Consulta> ListarMinhasMedico(Guid id); 
+        List<Consulta> ListarMinhasPaciente(Guid id);
+        List<Consulta> Listar();
 
         Consulta BuscarPorId(Guid id);
 

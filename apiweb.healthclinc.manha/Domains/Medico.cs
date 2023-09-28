@@ -36,9 +36,9 @@ namespace apiweb.healthclinc.manha.Domains
 
         //ref.tabela Especialidade
         [Required(ErrorMessage = "Especialidade obrigatória")]
-        public Guid IdEspecialidade { get; set; }
+        public Guid IdTipoEspecialidade { get; set; }
 
-        [ForeignKey(nameof(IdEspecialidade))]
+        [ForeignKey(nameof(IdTipoEspecialidade))]
         public TiposEspecialidade? TipoEspecialidade { get; set;}
 
     }

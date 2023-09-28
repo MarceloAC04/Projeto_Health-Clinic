@@ -10,16 +10,16 @@
             </summary>
             <param name="optionsBuilder">Objeto com as configurações definidas</param>
         </member>
-        <member name="T:apiweb.healthclinc.manha.Migrations.Bd_V1">
+        <member name="T:apiweb.healthclinc.manha.Migrations.Bd_V20">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
