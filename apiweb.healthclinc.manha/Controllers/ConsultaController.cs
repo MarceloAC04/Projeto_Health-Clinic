@@ -1,6 +1,7 @@
 ﻿using apiweb.healthclinc.manha.Domains;
 using apiweb.healthclinc.manha.Interfaces;
 using apiweb.healthclinc.manha.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,11 @@ namespace apiweb.healthclinc.manha.Controllers
             _consultaRepository = new ConsultaRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona um metodo cadastrar de uma nova consulta
+        /// </summary>
+        /// <param name="consulta">consulta a ser cadastrada</param>
+        /// <returns>StatusCode(201)</returns>
         [HttpPost]
         public IActionResult Post(Consulta consulta)
         {
@@ -33,7 +39,13 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo listar consultas de um medico
+        /// </summary>
+        /// <param name="id">Id do medico de referencia para a listagem das consulta</param>
+        /// <returns>Retorna uma lista com as consultas do medico</returns>
         [HttpGet("ConsultasDoMedico")]
+        //[Authorize(Roles = "Medico")]
         public IActionResult MedicoConsultas(Guid id)
         {
             try
@@ -47,8 +59,15 @@ namespace apiweb.healthclinc.manha.Controllers
 
                 return BadRequest(e.Message);
             }
-        } 
+        }
+
+        /// <summary>
+        /// Endpoint que aciona o metodo listar consultas de um paciente
+        /// </summary>
+        /// <param name="id">Id do paciente de referencia para a listagem das consulta</param>
+        /// <returns>Retorna uma lista com as consultas do paciente</returns>
         [HttpGet("ConsultasDoPaciente")]
+        //[Authorize(Roles = "Paciente")]
         public IActionResult PacienteConsultas(Guid id)
         {
             try
@@ -63,7 +82,12 @@ namespace apiweb.healthclinc.manha.Controllers
                 return BadRequest(e.Message);
             }
         }
+        /// <summary>
+        /// Endpoint que aciona o metodo de listar de todas as consultas
+        /// </summary>
+        /// <returns>Retorna uma lista de todas as consultas</returns>
         [HttpGet("Consultas")]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Listar()
         {
             try
@@ -71,6 +95,47 @@ namespace apiweb.healthclinc.manha.Controllers
                 List<Consulta> Lista = _consultaRepository.Listar();
 
                 return Ok(Lista);
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Endpoint que aciona o metodo de buscar por id de uma consulta
+        /// </summary>
+        /// <param name="id">Id da consulta a ser buscada</param>
+        /// <returns>retorna a consulta buscada</returns>
+        [HttpGet("{id}")]
+        public IActionResult BuscarId(Guid id)
+        {
+            try
+            {
+                return Ok(_consultaRepository.BuscarPorId(id));
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Endpoint que aciona o metodo atualizar de uma consulta
+        /// </summary>
+        /// <param name="id">Id da consulta a ser atualizada</param>
+        /// <param name="consulta">Corpo da consulta a ser atualizada</param>
+        /// <returns>StatusCode(201)</returns>
+        [HttpPut]
+        public IActionResult Atualizar(Guid id, Consulta consulta) 
+        {
+            try
+            {
+                _consultaRepository.Atualizar(id, consulta);
+
+                return StatusCode(201);
             }
             catch (Exception e)
             {

@@ -17,6 +17,11 @@ namespace apiweb.healthclinc.manha.Controllers
             _pacienteRepository = new PacienteRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de cadastrar um novo paciente
+        /// </summary>
+        /// <param name="medico">Novo paciente a ser cadastrado</param>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Post(Paciente paciente)
         {
@@ -33,6 +38,10 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metoodo de listar pacientes
+        /// </summary>
+        /// <returns>retorna uma lista com todos os pacientes cadastrados</returns>
         [HttpGet]
         public IActionResult Listar()
         {
@@ -49,6 +58,11 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de deletar um paciente
+        /// </summary>
+        /// <param name="id">Id do paciente a ser deletado</param>
+        /// <returns>StatusCode(201)</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {
@@ -65,6 +79,11 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de buscar por id de um paciente
+        /// </summary>
+        /// <param name="id">Id do paciente a ser buscado</param>
+        /// <returns>Retorna o paciente encontrado</returns>
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(Guid id)
         {
@@ -79,6 +98,12 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de atualizar
+        /// </summary>
+        /// <param name="id">id do paciente a ser atualizado</param>
+        /// <param name="medico">corpo do paciente a ser atualizado</param>
+        /// <returns>StatusCode(201)</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Paciente paciente)
         {

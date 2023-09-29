@@ -10,16 +10,255 @@
             </summary>
             <param name="optionsBuilder">Objeto com as configurações definidas</param>
         </member>
-        <member name="T:apiweb.healthclinc.manha.Migrations.Bd_V20">
+        <member name="M:apiweb.healthclinc.manha.Controllers.ClinicaController.Post(apiweb.healthclinc.manha.Domains.Clinica)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar no repositorio da clinica
+            </summary>
+            <param name="clinica">clinica a ser cadastrada</param>
+            <returns>StatusCode(201) Sucess</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Comentar(apiweb.healthclinc.manha.Domains.Comentario)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um comentario no repositorio
+            </summary>
+            <param name="comentario">ccomentario a ser cadastrado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo deletar no repositorio
+            </summary>
+            <param name="id">Id do comentario a ser deletado</param>
+            <returns>StatusCode(201) sucess</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Listar">
+            <summary>
+            Endpoint que aciona o metodo listar comentarios no repositorio
+            </summary>
+            <returns>Retorna uma lista contendo todos os comentarios</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.BuscarId(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Buscar Por Id de um comentario atraves de seu id
+            </summary>
+            <param name="id">Id do coomentario a ser buscado</param>
+            <returns>Retorna o comentario encontrado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.Post(apiweb.healthclinc.manha.Domains.Consulta)">
+            <summary>
+            Endpoint que aciona um metodo cadastrar de uma nova consulta
+            </summary>
+            <param name="consulta">consulta a ser cadastrada</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.MedicoConsultas(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo listar consultas de um medico
+            </summary>
+            <param name="id">Id do medico de referencia para a listagem das consulta</param>
+            <returns>Retorna uma lista com as consultas do medico</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.PacienteConsultas(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo listar consultas de um paciente
+            </summary>
+            <param name="id">Id do paciente de referencia para a listagem das consulta</param>
+            <returns>Retorna uma lista com as consultas do paciente</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.Listar">
+            <summary>
+            Endpoint que aciona o metodo de listar de todas as consultas
+            </summary>
+            <returns>Retorna uma lista de todas as consultas</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.BuscarId(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de buscar por id de uma consulta
+            </summary>
+            <param name="id">Id da consulta a ser buscada</param>
+            <returns>retorna a consulta buscada</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.Atualizar(System.Guid,apiweb.healthclinc.manha.Domains.Consulta)">
+            <summary>
+            Endpoint que aciona o metodo atualizar de uma consulta
+            </summary>
+            <param name="id">Id da consulta a ser atualizada</param>
+            <param name="consulta">Corpo da consulta a ser atualizada</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.LoginController.Post(apiweb.healthclinc.manha.ViewModels.LoginViewModel)">
+            <summary>
+            Endpoint que aciona o metodo de login da api e que gera o token de acesso
+            </summary>
+            <param name="usuario">dados do usuario a ser logado</param>
+            <returns>token de acesso gerado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Post(apiweb.healthclinc.manha.Domains.Medico)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um novo medico
+            </summary>
+            <param name="medico">Novo medico a ser cadastrado</param>
+            <returns>StatusCode(201) sucess</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Listar">
+            <summary>
+            Endpoint que aciona o metoodo de listar medicos
+            </summary>
+            <returns>retorna uma lista com todos os medicos cadastrados</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Atualizar(System.Guid,apiweb.healthclinc.manha.Domains.Medico)">
+            <summary>
+            Endpoint que aciona o metodo de atualizar
+            </summary>
+            <param name="id">id do medico a ser atualizado</param>
+            <param name="medico">corpo do medico a ser atualizado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Deletar(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de deletar um medico
+            </summary>
+            <param name="id">Id do medico a ser deletado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Buscar(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de buscar por id de um medico
+            </summary>
+            <param name="id">Id do medico a ser buscado</param>
+            <returns>Retorna o medico encontrado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.Post(apiweb.healthclinc.manha.Domains.Paciente)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um novo paciente
+            </summary>
+            <param name="medico">Novo paciente a ser cadastrado</param>
+            <returns>StatusCode(201) sucess</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.Listar">
+            <summary>
+            Endpoint que aciona o metoodo de listar pacientes
+            </summary>
+            <returns>retorna uma lista com todos os pacientes cadastrados</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de deletar um paciente
+            </summary>
+            <param name="id">Id do paciente a ser deletado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.BuscarPorId(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de buscar por id de um paciente
+            </summary>
+            <param name="id">Id do paciente a ser buscado</param>
+            <returns>Retorna o paciente encontrado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.Atualizar(System.Guid,apiweb.healthclinc.manha.Domains.Paciente)">
+            <summary>
+            Endpoint que aciona o metodo de atualizar
+            </summary>
+            <param name="id">id do paciente a ser atualizado</param>
+            <param name="medico">corpo do paciente a ser atualizado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ProntuarioController.Cadastrar(apiweb.healthclinc.manha.Domains.Prontuario)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um novo prontuario
+            </summary>
+            <param name="prontuario">novo prontuario a ser cadastrado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ProntuarioController.BuscarId(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo de buscar por id de um prontuario
+            </summary>
+            <param name="id">Id do prontuario a ser buscado</param>
+            <returns>Retorna o prontuario encontrado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ProntuarioController.Atualizar(System.Guid,apiweb.healthclinc.manha.Domains.Prontuario)">
+            <summary>
+            Endpoint que aciona o metodo de atualizar de um prontuario
+            </summary>
+            <param name="id">id do prontuario a ser atualizado</param>
+            <param name="prontuario">corpo do prontuario a ser atualizado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.StatusController.Cadastrar(apiweb.healthclinc.manha.Domains.StatusConsulta)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrar um status de consulta
+            </summary>
+            <param name="statusConsulta">Status de consulta a ser cadastrado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.TiposEspecialidadeController.Post(apiweb.healthclinc.manha.Domains.TiposEspecialidade)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrado de um tipo de especialidade medica
+            </summary>
+            <param name="tiposEspecialidade">Tipo de especialidade a ser cadastrada</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Post(apiweb.healthclinc.manha.Domains.TiposUsuario)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrado de um novo tipo de usuario
+            </summary>
+            <param name="tiposUsuario">Novo tipo usuario a ser cadastrado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Get">
+            <summary>
+            Endpoint que aciona  o metodo de listar todos os tipos de usuario
+            </summary>
+            <returns>Retorna uma lista de todos os tipos usuarios cadastardos</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo deletar de um tipo usuario
+            </summary>
+            <param name="id">Id do tipo usuario a ser deletado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Put(System.Guid,apiweb.healthclinc.manha.Domains.TiposUsuario)">
+            <summary>
+            Endpoint que aciona o metodo atualizar de um tipo usuario
+            </summary>
+            <param name="id">Id do tipo usuario a ser atualizado</param>
+            <param name="tiposUsuario">Corpo do tipo usuario a ser cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.UsuarioController.Post(apiweb.healthclinc.manha.Domains.Usuario)">
+            <summary>
+            Endpoint que aciona o metodo de cadastrado de um novo usuario
+            </summary>
+            <param name="tiposUsuario">Novousuario a ser cadastrado</param>
+            <returns>StatusCode(201)</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.UsuarioController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo buscar por id de um usuario cadastrado
+            </summary>
+            <param name="id">Id do usuario a ser buscado</param>
+            <returns>Retorna o usuario encontrado</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.UsuarioController.Get(System.String,System.String)">
+            <summary>
+            Endpoint que aciona o metodo buscar por email e senha de um usuario
+            </summary>
+            <param name="email">Email do usuario a ser buscado</param>
+            <param name="senha">Senha do usuario a ser buscado</param>
+            <returns>Retorna o usuario encontrado</returns>
+        </member>
+        <member name="T:apiweb.healthclinc.manha.Migrations.BD_V3">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.BD_V3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.BD_V3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:apiweb.healthclinc.manha.Migrations.Bd_V20.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:apiweb.healthclinc.manha.Migrations.BD_V3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

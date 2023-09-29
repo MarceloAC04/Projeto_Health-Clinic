@@ -22,7 +22,7 @@ namespace apiweb.healthclinc.manha.Repositories
                 {
                     consultaBuscado.DataConsulta = consulta.DataConsulta;
                     consultaBuscado.Horario = consulta.Horario;
-                    consultaBuscado.StatusConsulta!.Status = consulta.StatusConsulta!.Status;
+                    consultaBuscado.IdStatusConsulta = consulta.IdStatusConsulta;
                 }
 
                 _healthClinicContext.Consulta.Update(consultaBuscado!);

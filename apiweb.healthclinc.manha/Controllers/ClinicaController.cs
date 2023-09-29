@@ -17,6 +17,12 @@ namespace apiweb.healthclinc.manha.Controllers
             _clinicaRepository = new ClinicaRepository();
         }
 
+
+        /// <summary>
+        /// Endpoint que aciona o metodo de cadastrar no repositorio da clinica
+        /// </summary>
+        /// <param name="clinica">clinica a ser cadastrada</param>
+        /// <returns>StatusCode(201) Sucess</returns>
         [HttpPost]
         public IActionResult Post(Clinica clinica)
         {

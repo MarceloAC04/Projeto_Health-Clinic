@@ -69,6 +69,9 @@ namespace apiweb.healthclinc.manha.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Exibe")
+                        .HasColumnType("BIT");
+
                     b.Property<Guid>("IdClinica")
                         .HasColumnType("uniqueidentifier");
 

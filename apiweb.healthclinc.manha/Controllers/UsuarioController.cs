@@ -1,6 +1,7 @@
 ﻿using apiweb.healthclinc.manha.Domains;
 using apiweb.healthclinc.manha.Interfaces;
 using apiweb.healthclinc.manha.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,13 @@ namespace apiweb.healthclinc.manha.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de cadastrado de um novo usuario
+        /// </summary>
+        /// <param name="tiposUsuario">Novousuario a ser cadastrado</param>
+        /// <returns>StatusCode(201)</returns>
         [HttpPost]
+       // [Authorize(Roles = "Administrador")]
         public IActionResult Post(Usuario usuario)
         {
             try
@@ -33,6 +40,11 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo buscar por id de um usuario cadastrado
+        /// </summary>
+        /// <param name="id">Id do usuario a ser buscado</param>
+        /// <returns>Retorna o usuario encontrado</returns>
         [HttpGet]
         public IActionResult Get(Guid id)
         {
@@ -49,6 +61,12 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo buscar por email e senha de um usuario
+        /// </summary>
+        /// <param name="email">Email do usuario a ser buscado</param>
+        /// <param name="senha">Senha do usuario a ser buscado</param>
+        /// <returns>Retorna o usuario encontrado</returns>
         [HttpGet("EmaileSenha")]
         public IActionResult Get(string email, string senha)
         {

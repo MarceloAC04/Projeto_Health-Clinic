@@ -13,6 +13,10 @@ namespace apiweb.healthclinc.manha.Domains
         [Required(ErrorMessage = "Comentário obrigatório")]
         public string? DescricaoComentario { get; set; }
 
+        [Column(TypeName = "BIT")]
+        [Required(ErrorMessage = "Informação de exibição obrigatória!")]
+        public bool Exibe { get; set; }
+
         //ref.tabela Paciente
         [Required(ErrorMessage = "Informe o paciente da clinica")]
         public Guid IdPaciente { get; set; }

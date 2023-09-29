@@ -12,8 +12,8 @@ using apiweb.healthclinc.manha.Contexts;
 namespace apiweb.healthclinc.manha.Migrations
 {
     [DbContext(typeof(HealthClinicContext))]
-    [Migration("20230928114644_Bd_V2.0")]
-    partial class Bd_V20
+    [Migration("20230929122158_BD_V3")]
+    partial class BD_V3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,6 +71,9 @@ namespace apiweb.healthclinc.manha.Migrations
                     b.Property<string>("DescricaoComentario")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Exibe")
+                        .HasColumnType("BIT");
 
                     b.Property<Guid>("IdClinica")
                         .HasColumnType("uniqueidentifier");
