@@ -88,7 +88,27 @@ namespace apiweb.healthclinc.manha.Repositories
         {
             try
             {
-                return _healthClinicContext.Comentario.Where(c => c.Exibe == true).ToList();
+                return  _healthClinicContext.Comentario
+                    .Select(c => new Comentario
+                    {
+                        IdComentario = c.IdComentario,
+                        DescricaoComentario = c.DescricaoComentario,
+                        Exibe = c.Exibe,
+                        IdPaciente = c.IdPaciente,
+
+                        Paciente = new Paciente
+                        {
+                            IdPaciente = c.IdPaciente,
+                            NomePaciente = c.Paciente!.NomePaciente
+                        },
+
+                        IdClinica = c.IdClinica,
+                        Clinica = new Clinica
+                        {
+                            IdClinica = c.IdClinica,
+                            NomeFantasia = c.Clinica!.NomeFantasia
+                        }
+                    }).Where(c => c.Exibe == true).ToList();
             }
             catch (Exception)
             {

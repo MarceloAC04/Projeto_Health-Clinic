@@ -18,9 +18,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
         
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrar um novo medico
+        /// Endpoint que aciona o método de cadastrar um novo médico
         /// </summary>
-        /// <param name="medico">Novo medico a ser cadastrado</param>
+        /// <param name="medico">Novo médico a ser cadastrado</param>
         /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Post(Medico medico)
@@ -39,9 +39,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metoodo de listar medicos
+        /// Endpoint que aciona o método de listar médicos
         /// </summary>
-        /// <returns>retorna uma lista com todos os medicos cadastrados</returns>
+        /// <returns>retorna uma lista com todos os médicos cadastrados</returns>
         [HttpGet("Listar Médicos")]
         public IActionResult Listar()
         {
@@ -58,11 +58,11 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
         /// <summary>
-        /// Endpoint que aciona o metodo de atualizar
+        /// Endpoint que aciona o método de atualizar
         /// </summary>
-        /// <param name="id">id do medico a ser atualizado</param>
-        /// <param name="medico">corpo do medico a ser atualizado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <param name="id">id do médico a ser atualizado</param>
+        /// <param name="medico">corpo do médico a ser atualizado</param>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Medico medico) 
         {
@@ -80,10 +80,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de deletar um medico
+        /// Endpoint que aciona o método de deletar um médico
         /// </summary>
-        /// <param name="id">Id do medico a ser deletado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <param name="id">Id do médico a ser deletado</param>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpDelete]
         public IActionResult Deletar(Guid id) 
         {
@@ -101,10 +101,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de buscar por id de um medico
+        /// Endpoint que aciona o método de buscar por id de um médico
         /// </summary>
-        /// <param name="id">Id do medico a ser buscado</param>
-        /// <returns>Retorna o medico encontrado</returns>
+        /// <param name="id">Id do médico a ser buscado</param>
+        /// <returns>Retorna o médico encontrado</returns>
         [HttpGet("{id}")]
         public IActionResult Buscar(Guid id)
         {

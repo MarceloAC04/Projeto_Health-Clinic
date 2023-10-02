@@ -19,10 +19,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrar um status de consulta
+        /// Endpoint que aciona o método de cadastrar um status de consulta
         /// </summary>
         /// <param name="statusConsulta">Status de consulta a ser cadastrado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Cadastrar(StatusConsulta statusConsulta)
         {

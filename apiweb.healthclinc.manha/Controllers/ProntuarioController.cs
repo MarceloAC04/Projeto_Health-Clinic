@@ -18,10 +18,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrar um novo prontuario
+        /// Endpoint que aciona o método de cadastrar de um novo prontuário
         /// </summary>
-        /// <param name="prontuario">novo prontuario a ser cadastrado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <param name="prontuario">novo prontuário a ser cadastrado</param>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Cadastrar(Prontuario prontuario)
         {
@@ -39,10 +39,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de buscar por id de um prontuario
+        /// Endpoint que aciona o método de buscar por id de um prontuário
         /// </summary>
-        /// <param name="id">Id do prontuario a ser buscado</param>
-        /// <returns>Retorna o prontuario encontrado</returns>
+        /// <param name="id">Id do prontuário a ser buscado</param>
+        /// <returns>Retorna o prontuário encontrado</returns>
         [HttpGet]
         public IActionResult BuscarId(Guid id)
         {
@@ -58,10 +58,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de atualizar de um prontuario
+        /// Endpoint que aciona o método de atualizar de um novo prontuário
         /// </summary>
-        /// <param name="id">id do prontuario a ser atualizado</param>
-        /// <param name="prontuario">corpo do prontuario a ser atualizado</param>
+        /// <param name="id">id do prontuário a ser atualizado</param>
+        /// <param name="prontuario">corpo do prontuário a ser atualizado</param>
         /// <returns>StatusCode(201)</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Prontuario prontuario)

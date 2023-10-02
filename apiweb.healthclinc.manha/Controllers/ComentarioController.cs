@@ -18,9 +18,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrar um comentario no repositorio
+        /// Endpoint que aciona o método de cadastrar de um novo comentário no repositório
         /// </summary>
-        /// <param name="comentario">ccomentario a ser cadastrado</param>
+        /// <param name="comentario">ccomentário a ser cadastrado</param>
         /// <returns>StatusCode(201)</returns>
         [HttpPost]
         public IActionResult Comentar(Comentario comentario)
@@ -39,9 +39,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo deletar no repositorio
+        /// Endpoint que aciona o método deletar no repositório
         /// </summary>
-        /// <param name="id">Id do comentario a ser deletado</param>
+        /// <param name="id">Id do comentário a ser deletado</param>
         /// <returns>StatusCode(201) sucess</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
@@ -60,9 +60,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo listar comentarios no repositorio
+        /// Endpoint que aciona o método listar comentários no repositório
         /// </summary>
-        /// <returns>Retorna uma lista contendo todos os comentarios</returns>
+        /// <returns>Retorna uma lista contendo todos os comentários</returns>
         [HttpGet("Listar")]
         public IActionResult Listar()
         {
@@ -80,10 +80,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo Buscar Por Id de um comentario atraves de seu id
+        /// Endpoint que aciona o método Buscar Por Id de um comentário atráves de seu id
         /// </summary>
-        /// <param name="id">Id do coomentario a ser buscado</param>
-        /// <returns>Retorna o comentario encontrado</returns>
+        /// <param name="id">Id do coomentário a ser buscado</param>
+        /// <returns>Retorna o comentário encontrado</returns>
         [HttpGet]
         public IActionResult BuscarId(Guid id)
         {

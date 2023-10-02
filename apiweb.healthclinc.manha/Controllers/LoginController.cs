@@ -21,9 +21,9 @@ namespace apiweb.healthclinc.manha.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
         /// <summary>
-        /// Endpoint que aciona o metodo de login da api e que gera o token de acesso
+        /// Endpoint que aciona o método de login da api e que gera o token de acesso
         /// </summary>
-        /// <param name="usuario">dados do usuario a ser logado</param>
+        /// <param name="usuario">dados do usuário a ser logado</param>
         /// <returns>token de acesso gerado</returns>
         [HttpPost]
         public IActionResult Post(LoginViewModel usuario)

@@ -60,7 +60,8 @@ namespace apiweb.healthclinc.manha.Repositories
                         Medico = new Medico
                         {
                             IdMedico = c.IdMedico,
-                            NomeMedico = c.Medico!.NomeMedico
+                            NomeMedico = c.Medico!.NomeMedico,
+                            TipoEspecialidade = c.Medico!.TipoEspecialidade
                         },
 
                         IdPaciente = c.IdPaciente,
@@ -68,7 +69,8 @@ namespace apiweb.healthclinc.manha.Repositories
                         Paciente = new Paciente
                         {
                             IdPaciente = c.IdPaciente,
-                            NomePaciente = c.Paciente!.NomePaciente
+                            NomePaciente = c.Paciente!.NomePaciente,
+                            CPF = c.Paciente!.CPF
                         },
 
                         IdClinica = c.IdClinica,
@@ -122,17 +124,137 @@ namespace apiweb.healthclinc.manha.Repositories
 
         public List<Consulta> ListarMinhasMedico(Guid id)
         {
-            return _healthClinicContext.Consulta.Where(c => c.IdMedico == id).ToList();
+            return _healthClinicContext.Consulta
+                .Select(c => new Consulta
+                {
+                    IdConsulta = c.IdConsulta,
+                    DataConsulta = c.DataConsulta,
+                    Horario = c.Horario,
+                    Descricao = c.Descricao,
+
+                    IdStatusConsulta = c.IdStatusConsulta,
+                    StatusConsulta = new StatusConsulta
+                    {
+                        IdStatusConsulta = c.IdStatusConsulta,
+                        Status = c.StatusConsulta!.Status
+                    },
+
+                    IdMedico = c.IdMedico,
+
+                    Medico = new Medico
+                    {
+                        IdMedico = c.IdMedico,
+                        NomeMedico = c.Medico!.NomeMedico,
+                        TipoEspecialidade = c.Medico!.TipoEspecialidade
+                    },
+
+                    IdPaciente = c.IdPaciente,
+
+                    Paciente = new Paciente
+                    {
+                        IdPaciente = c.IdPaciente,
+                        NomePaciente = c.Paciente!.NomePaciente,
+                        CPF = c.Paciente!.CPF
+                    },
+
+                    IdClinica = c.IdClinica,
+
+                    Clinica = new Clinica
+                    {
+                        IdClinica = c.IdClinica,
+                        NomeFantasia = c.Clinica!.NomeFantasia
+                    }
+                }).Where(c => c.IdMedico == id).ToList();
         }
 
         public List<Consulta> ListarMinhasPaciente(Guid id)
         {
-            return _healthClinicContext.Consulta.Where(c => c.IdPaciente == id).ToList();
+            return _healthClinicContext.Consulta
+                .Select(c => new Consulta
+                {
+                    IdConsulta = c.IdConsulta,
+                    DataConsulta = c.DataConsulta,
+                    Horario = c.Horario,
+                    Descricao = c.Descricao,
+
+                    IdStatusConsulta = c.IdStatusConsulta,
+                    StatusConsulta = new StatusConsulta
+                    {
+                        IdStatusConsulta = c.IdStatusConsulta,
+                        Status = c.StatusConsulta!.Status
+                    },
+
+                    IdMedico = c.IdMedico,
+
+                    Medico = new Medico
+                    {
+                        IdMedico = c.IdMedico,
+                        NomeMedico = c.Medico!.NomeMedico,
+                        TipoEspecialidade = c.Medico!.TipoEspecialidade
+                    },
+
+                    IdPaciente = c.IdPaciente,
+
+                    Paciente = new Paciente
+                    {
+                        IdPaciente = c.IdPaciente,
+                        NomePaciente = c.Paciente!.NomePaciente,
+                        CPF = c.Paciente!.CPF
+                    },
+
+                    IdClinica = c.IdClinica,
+
+                    Clinica = new Clinica
+                    {
+                        IdClinica = c.IdClinica,
+                        NomeFantasia = c.Clinica!.NomeFantasia
+                    }
+                }).Where(c => c.IdPaciente == id).ToList();
         }
 
         public List<Consulta> Listar()
         {
-            return _healthClinicContext.Consulta.ToList();
+            return _healthClinicContext.Consulta
+                .Select(c => new Consulta
+                {
+                    IdConsulta = c.IdConsulta,
+                    DataConsulta = c.DataConsulta,
+                    Horario = c.Horario,
+                    Descricao = c.Descricao,
+
+                    IdStatusConsulta = c.IdStatusConsulta,
+                    StatusConsulta = new StatusConsulta
+                    {
+                        IdStatusConsulta = c.IdStatusConsulta,
+                        Status = c.StatusConsulta!.Status
+                    },
+
+                    IdMedico = c.IdMedico,
+
+                    Medico = new Medico
+                    {
+                        IdMedico = c.IdMedico,
+                        NomeMedico = c.Medico!.NomeMedico,
+                        TipoEspecialidade = c.Medico!.TipoEspecialidade
+                    },
+
+                    IdPaciente = c.IdPaciente,
+
+                    Paciente = new Paciente
+                    {
+                        IdPaciente = c.IdPaciente,
+                        NomePaciente = c.Paciente!.NomePaciente,
+                        CPF = c.Paciente!.CPF
+                    },
+
+                    IdClinica = c.IdClinica,
+
+                    Clinica = new Clinica
+                    {
+                        IdClinica = c.IdClinica,
+                        NomeFantasia = c.Clinica!.NomeFantasia
+                    }
+                }).ToList();
         }
     }
 }

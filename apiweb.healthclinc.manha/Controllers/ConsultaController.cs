@@ -9,6 +9,7 @@ namespace apiweb.healthclinc.manha.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class ConsultaController : ControllerBase
     {
         private IConsultaRepository _consultaRepository;
@@ -19,10 +20,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona um metodo cadastrar de uma nova consulta
+        /// Endpoint que aciona um método cadastrar de uma nova consulta
         /// </summary>
         /// <param name="consulta">consulta a ser cadastrada</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Post(Consulta consulta)
         {
@@ -40,10 +41,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo listar consultas de um medico
+        /// Endpoint que aciona o método listar consultas de um médico
         /// </summary>
-        /// <param name="id">Id do medico de referencia para a listagem das consulta</param>
-        /// <returns>Retorna uma lista com as consultas do medico</returns>
+        /// <param name="id">Id do médico de referência para a listagem das consulta</param>
+        /// <returns>Retorna uma lista com as consultas do médico</returns>
         [HttpGet("ConsultasDoMedico")]
         //[Authorize(Roles = "Medico")]
         public IActionResult MedicoConsultas(Guid id)
@@ -62,9 +63,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo listar consultas de um paciente
+        /// Endpoint que aciona o método listar consultas de um paciente
         /// </summary>
-        /// <param name="id">Id do paciente de referencia para a listagem das consulta</param>
+        /// <param name="id">Id do paciente de referência para a listagem das consulta</param>
         /// <returns>Retorna uma lista com as consultas do paciente</returns>
         [HttpGet("ConsultasDoPaciente")]
         //[Authorize(Roles = "Paciente")]
@@ -83,7 +84,7 @@ namespace apiweb.healthclinc.manha.Controllers
             }
         }
         /// <summary>
-        /// Endpoint que aciona o metodo de listar de todas as consultas
+        /// Endpoint que aciona o método de listar de todas as consultas
         /// </summary>
         /// <returns>Retorna uma lista de todas as consultas</returns>
         [HttpGet("Consultas")]
@@ -104,7 +105,7 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de buscar por id de uma consulta
+        /// Endpoint que aciona o método de buscar por id de uma consulta
         /// </summary>
         /// <param name="id">Id da consulta a ser buscada</param>
         /// <returns>retorna a consulta buscada</returns>
@@ -123,11 +124,11 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo atualizar de uma consulta
+        /// Endpoint que aciona o método atualizar de uma consulta
         /// </summary>
         /// <param name="id">Id da consulta a ser atualizada</param>
         /// <param name="consulta">Corpo da consulta a ser atualizada</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Consulta consulta) 
         {

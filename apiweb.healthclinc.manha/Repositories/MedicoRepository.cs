@@ -12,6 +12,7 @@ namespace apiweb.healthclinc.manha.Repositories
         {
             _healthClinicContext = new HealthClinicContext();
         }
+
         public void Atualizar(Guid id, Medico medico)
         {
             try
@@ -63,6 +64,7 @@ namespace apiweb.healthclinc.manha.Repositories
                              }
                          },
 
+                         IdTipoEspecialidade = m.IdTipoEspecialidade,
                          TipoEspecialidade = new TiposEspecialidade
                          {
                              IdTipoEspecialidade = m.IdTipoEspecialidade,
@@ -77,6 +79,8 @@ namespace apiweb.healthclinc.manha.Repositories
                              CNPJ = m.Clinca!.CNPJ,
                              RazaoSocial = m.Clinca!.RazaoSocial,
                              Endereco = m.Clinca!.Endereco,
+                             HorarioAbertura = m.Clinca!.HorarioAbertura,
+                             HorarioEncerramento = m.Clinca!.HorarioEncerramento
                          }
 
                         
@@ -130,7 +134,49 @@ namespace apiweb.healthclinc.manha.Repositories
 
         public List<Medico> Listar()
         {
-            return _healthClinicContext.Medico.ToList();
+            return _healthClinicContext.Medico
+                 .Select(m => new Medico
+                 {
+                     IdMedico = m.IdMedico,
+                     NomeMedico = m.NomeMedico,
+                     CRM = m.CRM,
+                     IdUsuario = m.IdUsuario,
+
+                     Usuario = new Usuario
+                     {
+                         IdUsuario = m.IdUsuario,
+                         Email = m.Usuario!.Email,
+                         Senha = m.Usuario!.Senha,
+                         IdTipoUsuario = m.Usuario!.IdTipoUsuario,
+
+                         TiposUsuario = new TiposUsuario
+                         {
+                             IdTipoUsuario = m.Usuario.IdTipoUsuario,
+                             Titulo = m.Usuario.TiposUsuario!.Titulo
+                         }
+                     },
+
+                     IdTipoEspecialidade = m.IdTipoEspecialidade,
+                     TipoEspecialidade = new TiposEspecialidade
+                     {
+                         IdTipoEspecialidade = m.IdTipoEspecialidade,
+                         Especialidade = m.TipoEspecialidade!.Especialidade
+                     },
+
+                     IdClinica = m.IdClinica,
+                     Clinca = new Clinica
+                     {
+                         IdClinica = m.IdClinica,
+                         NomeFantasia = m.Clinca!.NomeFantasia,
+                         CNPJ = m.Clinca!.CNPJ,
+                         RazaoSocial = m.Clinca!.RazaoSocial,
+                         Endereco = m.Clinca!.Endereco,
+                         HorarioAbertura = m.Clinca!.HorarioAbertura,
+                         HorarioEncerramento = m.Clinca!.HorarioEncerramento
+                     }
+
+
+                 }).ToList();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace apiweb.healthclinc.manha.Repositories
 
                 if (usuarioBuscado != null)
                 {
-                    bool confere = Criptografia.CompararHash(senha, usuarioBuscado.Senha);
+                    bool confere = Criptografia.CompararHash(senha, usuarioBuscado.Senha!);
 
                     if (confere)
                     {

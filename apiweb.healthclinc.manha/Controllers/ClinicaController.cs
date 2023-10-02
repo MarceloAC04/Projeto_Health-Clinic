@@ -19,9 +19,9 @@ namespace apiweb.healthclinc.manha.Controllers
 
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrar no repositorio da clinica
+        /// Endpoint que aciona o método de cadastrar no repositório da clínica
         /// </summary>
-        /// <param name="clinica">clinica a ser cadastrada</param>
+        /// <param name="clinica">nova clinica a ser cadastrada</param>
         /// <returns>StatusCode(201) Sucess</returns>
         [HttpPost]
         public IActionResult Post(Clinica clinica)

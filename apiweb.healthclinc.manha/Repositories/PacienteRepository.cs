@@ -25,7 +25,7 @@ namespace apiweb.healthclinc.manha.Repositories
                     pacienteBuscado.Telefone = paciente.Telefone;
                 }
 
-                _healthClinicContext.Paciente.Update(pacienteBuscado);
+                _healthClinicContext.Paciente.Update(pacienteBuscado!);
 
                 _healthClinicContext.SaveChanges();
             }
@@ -115,7 +115,30 @@ namespace apiweb.healthclinc.manha.Repositories
         {
             try
             {
-                return _healthClinicContext.Paciente.ToList();
+                return _healthClinicContext.Paciente
+                    .Select(p => new Paciente
+                    {
+                        IdPaciente = p.IdPaciente,
+                        NomePaciente = p.NomePaciente,
+                        Idade = p.Idade,
+                        CPF = p.CPF,
+                        Telefone = p.Telefone,
+
+                        IdUsuario = p.IdUsuario,
+                        Usuario = new Usuario
+                        {
+                            IdUsuario = p.IdUsuario,
+                            Email = p.Usuario!.Email,
+                            Senha = p.Usuario!.Senha,
+                            IdTipoUsuario = p.Usuario!.IdTipoUsuario,
+
+                            TiposUsuario = new TiposUsuario
+                            {
+                                IdTipoUsuario = p.Usuario.IdTipoUsuario,
+                                Titulo = p.Usuario.TiposUsuario!.Titulo
+                            }
+                        }
+                    }).ToList();
 
             }
             catch (Exception)

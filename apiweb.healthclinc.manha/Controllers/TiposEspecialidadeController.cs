@@ -18,10 +18,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrado de um tipo de especialidade medica
+        /// Endpoint que aciona o método de cadastrar de um tipo de especialidade médica
         /// </summary>
         /// <param name="tiposEspecialidade">Tipo de especialidade a ser cadastrada</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) sucess </returns>
         [HttpPost]
         public IActionResult Post(TiposEspecialidade tiposEspecialidade)
         {

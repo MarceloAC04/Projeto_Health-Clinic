@@ -18,10 +18,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo de cadastrado de um novo tipo de usuario
+        /// Endpoint que aciona o método de cadastrar um novo tipo de usuário
         /// </summary>
-        /// <param name="tiposUsuario">Novo tipo usuario a ser cadastrado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <param name="tiposUsuario">Novo tipo usuário a ser cadastrado</param>
+        /// <returns>StatusCode(201) sucess</returns>
         [HttpPost]
         public IActionResult Post(TiposUsuario tiposUsuario)
         {
@@ -40,9 +40,9 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona  o metodo de listar todos os tipos de usuario
+        /// Endpoint que aciona  o método de listar todos os tipos de usuário
         /// </summary>
-        /// <returns>Retorna uma lista de todos os tipos usuarios cadastardos</returns>
+        /// <returns>Retorna uma lista de todos os tipos usuários cadastardos</returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -61,9 +61,9 @@ namespace apiweb.healthclinc.manha.Controllers
 
 
         /// <summary>
-        /// Endpoint que aciona o metodo deletar de um tipo usuario
+        /// Endpoint que aciona o método deletar de um tipo usuário
         /// </summary>
-        /// <param name="id">Id do tipo usuario a ser deletado</param>
+        /// <param name="id">Id do tipo usuário a ser deletado</param>
         /// <returns>StatusCode(201)</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
@@ -82,10 +82,10 @@ namespace apiweb.healthclinc.manha.Controllers
         }
 
         /// <summary>
-        /// Endpoint que aciona o metodo atualizar de um tipo usuario
+        /// Endpoint que aciona o método atualizar de um tipo usuário
         /// </summary>
-        /// <param name="id">Id do tipo usuario a ser atualizado</param>
-        /// <param name="tiposUsuario">Corpo do tipo usuario a ser cadastrado</param>
+        /// <param name="id">Id do tipo usuário a ser atualizado</param>
+        /// <param name="tiposUsuario">Corpo do tipo usuário a ser cadastrado</param>
         /// <returns></returns>
         [HttpPut]
         public IActionResult Put(Guid id, TiposUsuario tiposUsuario)

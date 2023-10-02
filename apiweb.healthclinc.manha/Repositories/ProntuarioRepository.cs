@@ -23,7 +23,7 @@ namespace apiweb.healthclinc.manha.Repositories
                     prontuarioBuscado.DescricaoProntuario = prontuario.DescricaoProntuario;
                 }
 
-                _healthClinicContext.Prontuario.Update(prontuarioBuscado);
+                _healthClinicContext.Prontuario.Update(prontuarioBuscado!);
 
                 _healthClinicContext.SaveChanges();
             }
@@ -68,7 +68,7 @@ namespace apiweb.healthclinc.manha.Repositories
                 {
                     return prontuarioBuscado;
                 }
-                return null;
+                return null!;
             }
             catch (Exception)
             {
