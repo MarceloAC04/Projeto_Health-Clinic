@@ -22,7 +22,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de cadastrar um novo usuário
         /// </summary>
         /// <param name="usuario">Novo usuário a ser cadastrado</param>
-        /// <returns>StatusCode(201) sucess </returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
        // [Authorize(Roles = "Administrador")]
         public IActionResult Post(Usuario usuario)

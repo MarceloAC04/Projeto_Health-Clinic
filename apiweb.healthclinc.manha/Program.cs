@@ -54,7 +54,7 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "Health Clinic",
-        Description = "API para gerenciamento de clínica médica - Projeto da sprint 2 - Backend API",
+        Description = "API para gerenciamento de clínica médica - Projeto do 2 semestre - Backend API",
         Contact = new OpenApiContact
         {
             Name = "Marcelo",

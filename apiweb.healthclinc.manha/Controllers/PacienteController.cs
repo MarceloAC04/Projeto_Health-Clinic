@@ -21,7 +21,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de cadastrar de um novo paciente
         /// </summary>
         /// <param name="paciente">Novo paciente a ser cadastrado</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
         public IActionResult Post(Paciente paciente)
         {
@@ -62,7 +62,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de deletar um paciente
         /// </summary>
         /// <param name="id">Id do paciente a ser deletado</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {
@@ -103,7 +103,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// </summary>
         /// <param name="id">id do paciente a ser atualizado</param>
         /// <param name="paciente">corpo do paciente a ser atualizado</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Paciente paciente)
         {

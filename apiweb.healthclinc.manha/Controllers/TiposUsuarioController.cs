@@ -21,7 +21,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de cadastrar um novo tipo de usuário
         /// </summary>
         /// <param name="tiposUsuario">Novo tipo usuário a ser cadastrado</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
         public IActionResult Post(TiposUsuario tiposUsuario)
         {
@@ -64,7 +64,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método deletar de um tipo usuário
         /// </summary>
         /// <param name="id">Id do tipo usuário a ser deletado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {
@@ -86,7 +86,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// </summary>
         /// <param name="id">Id do tipo usuário a ser atualizado</param>
         /// <param name="tiposUsuario">Corpo do tipo usuário a ser cadastrado</param>
-        /// <returns></returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
         public IActionResult Put(Guid id, TiposUsuario tiposUsuario)
         {

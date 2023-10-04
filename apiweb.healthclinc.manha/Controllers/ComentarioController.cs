@@ -21,7 +21,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de cadastrar de um novo comentário no repositório
         /// </summary>
         /// <param name="comentario">ccomentário a ser cadastrado</param>
-        /// <returns>StatusCode(201)</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
         public IActionResult Comentar(Comentario comentario)
         {
@@ -42,7 +42,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método deletar no repositório
         /// </summary>
         /// <param name="id">Id do comentário a ser deletado</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {

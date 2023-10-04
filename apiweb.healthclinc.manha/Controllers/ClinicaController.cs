@@ -22,7 +22,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona o método de cadastrar no repositório da clínica
         /// </summary>
         /// <param name="clinica">nova clinica a ser cadastrada</param>
-        /// <returns>StatusCode(201) Sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
         public IActionResult Post(Clinica clinica)
         {
@@ -32,6 +32,69 @@ namespace apiweb.healthclinc.manha.Controllers
 
                 return StatusCode(201);
 
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Endpoint que aciona o método de deletar uma clínica
+        /// </summary>
+        /// <param name="id">Id da clínica a ser deletada</param>
+        /// <returns>StatusCode(201) Success</returns>
+        [HttpDelete]
+        public IActionResult Deletar(Guid id)
+        {
+            try
+            {
+                _clinicaRepository.Deletar(id);
+
+                return StatusCode(201);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+
+            }
+        }
+
+        /// <summary>
+        /// Endpoint que aciona método de listar todas as clínicas cadastradas
+        /// </summary>
+        /// <returns>Retorna uma lista contendo todas as clínicas cadastradas</returns>
+        [HttpGet]
+        public IActionResult Lista()
+        {
+            try
+            {
+                List<Clinica> lista = _clinicaRepository.Listar();
+
+                return Ok(lista);
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Endpoint que aciona o método de atualizar uma clínica 
+        /// </summary>
+        /// <param name="id">Id da clínica a ser atualizada</param>
+        /// <param name="clinica">Corpo da clínica a ser atualizada</param>
+        /// <returns>StatusCode(201) Success</returns>
+        [HttpPut]
+        public IActionResult Atualizar (Guid id, Clinica clinica)
+        {
+            try
+            {
+                _clinicaRepository.Atualizar(id, clinica);
+
+                return StatusCode(201);
             }
             catch (Exception e)
             {

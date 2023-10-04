@@ -23,7 +23,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// Endpoint que aciona um método cadastrar de uma nova consulta
         /// </summary>
         /// <param name="consulta">consulta a ser cadastrada</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
         public IActionResult Post(Consulta consulta)
         {
@@ -128,7 +128,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// </summary>
         /// <param name="id">Id da consulta a ser atualizada</param>
         /// <param name="consulta">Corpo da consulta a ser atualizada</param>
-        /// <returns>StatusCode(201) sucess</returns>
+        /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
         public IActionResult Atualizar(Guid id, Consulta consulta) 
         {

@@ -15,21 +15,42 @@
             Endpoint que aciona o método de cadastrar no repositório da clínica
             </summary>
             <param name="clinica">nova clinica a ser cadastrada</param>
-            <returns>StatusCode(201) Sucess</returns>
+            <returns>StatusCode(201) Success</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ClinicaController.Deletar(System.Guid)">
+            <summary>
+            Endpoint que aciona o método de deletar uma clínica
+            </summary>
+            <param name="id">Id da clínica a ser deletada</param>
+            <returns>StatusCode(201) Success</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ClinicaController.Lista">
+            <summary>
+            Endpoint que aciona método de listar todas as clínicas cadastradas
+            </summary>
+            <returns>Retorna uma lista contendo todas as clínicas cadastradas</returns>
+        </member>
+        <member name="M:apiweb.healthclinc.manha.Controllers.ClinicaController.Atualizar(System.Guid,apiweb.healthclinc.manha.Domains.Clinica)">
+            <summary>
+            Endpoint que aciona o método de atualizar uma clínica 
+            </summary>
+            <param name="id">Id da clínica a ser atualizada</param>
+            <param name="clinica">Corpo da clínica a ser atualizada</param>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Comentar(apiweb.healthclinc.manha.Domains.Comentario)">
             <summary>
             Endpoint que aciona o método de cadastrar de um novo comentário no repositório
             </summary>
             <param name="comentario">ccomentário a ser cadastrado</param>
-            <returns>StatusCode(201)</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Delete(System.Guid)">
             <summary>
             Endpoint que aciona o método deletar no repositório
             </summary>
             <param name="id">Id do comentário a ser deletado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ComentarioController.Listar">
             <summary>
@@ -49,7 +70,7 @@
             Endpoint que aciona um método cadastrar de uma nova consulta
             </summary>
             <param name="consulta">consulta a ser cadastrada</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ConsultaController.MedicoConsultas(System.Guid)">
             <summary>
@@ -84,7 +105,7 @@
             </summary>
             <param name="id">Id da consulta a ser atualizada</param>
             <param name="consulta">Corpo da consulta a ser atualizada</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.LoginController.Post(apiweb.healthclinc.manha.ViewModels.LoginViewModel)">
             <summary>
@@ -98,7 +119,7 @@
             Endpoint que aciona o método de cadastrar um novo médico
             </summary>
             <param name="medico">Novo médico a ser cadastrado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Listar">
             <summary>
@@ -112,14 +133,14 @@
             </summary>
             <param name="id">id do médico a ser atualizado</param>
             <param name="medico">corpo do médico a ser atualizado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Deletar(System.Guid)">
             <summary>
             Endpoint que aciona o método de deletar um médico
             </summary>
             <param name="id">Id do médico a ser deletado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.MedicoController.Buscar(System.Guid)">
             <summary>
@@ -133,7 +154,7 @@
             Endpoint que aciona o método de cadastrar de um novo paciente
             </summary>
             <param name="paciente">Novo paciente a ser cadastrado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.Listar">
             <summary>
@@ -146,7 +167,7 @@
             Endpoint que aciona o método de deletar um paciente
             </summary>
             <param name="id">Id do paciente a ser deletado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.PacienteController.BuscarPorId(System.Guid)">
             <summary>
@@ -161,14 +182,14 @@
             </summary>
             <param name="id">id do paciente a ser atualizado</param>
             <param name="paciente">corpo do paciente a ser atualizado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ProntuarioController.Cadastrar(apiweb.healthclinc.manha.Domains.Prontuario)">
             <summary>
             Endpoint que aciona o método de cadastrar de um novo prontuário
             </summary>
             <param name="prontuario">novo prontuário a ser cadastrado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.ProntuarioController.BuscarId(System.Guid)">
             <summary>
@@ -183,28 +204,28 @@
             </summary>
             <param name="id">id do prontuário a ser atualizado</param>
             <param name="prontuario">corpo do prontuário a ser atualizado</param>
-            <returns>StatusCode(201)</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.StatusController.Cadastrar(apiweb.healthclinc.manha.Domains.StatusConsulta)">
             <summary>
             Endpoint que aciona o método de cadastrar um status de consulta
             </summary>
             <param name="statusConsulta">Status de consulta a ser cadastrado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.TiposEspecialidadeController.Post(apiweb.healthclinc.manha.Domains.TiposEspecialidade)">
             <summary>
             Endpoint que aciona o método de cadastrar de um tipo de especialidade médica
             </summary>
             <param name="tiposEspecialidade">Tipo de especialidade a ser cadastrada</param>
-            <returns>StatusCode(201) sucess </returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Post(apiweb.healthclinc.manha.Domains.TiposUsuario)">
             <summary>
             Endpoint que aciona o método de cadastrar um novo tipo de usuário
             </summary>
             <param name="tiposUsuario">Novo tipo usuário a ser cadastrado</param>
-            <returns>StatusCode(201) sucess</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Get">
             <summary>
@@ -217,7 +238,7 @@
             Endpoint que aciona o método deletar de um tipo usuário
             </summary>
             <param name="id">Id do tipo usuário a ser deletado</param>
-            <returns>StatusCode(201)</returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.TiposUsuarioController.Put(System.Guid,apiweb.healthclinc.manha.Domains.TiposUsuario)">
             <summary>
@@ -225,14 +246,14 @@
             </summary>
             <param name="id">Id do tipo usuário a ser atualizado</param>
             <param name="tiposUsuario">Corpo do tipo usuário a ser cadastrado</param>
-            <returns></returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.UsuarioController.Post(apiweb.healthclinc.manha.Domains.Usuario)">
             <summary>
             Endpoint que aciona o método de cadastrar um novo usuário
             </summary>
             <param name="usuario">Novo usuário a ser cadastrado</param>
-            <returns>StatusCode(201) sucess </returns>
+            <returns>StatusCode(201) Success</returns>
         </member>
         <member name="M:apiweb.healthclinc.manha.Controllers.UsuarioController.Get(System.Guid)">
             <summary>
