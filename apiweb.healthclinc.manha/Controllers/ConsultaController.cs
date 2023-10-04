@@ -25,6 +25,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="consulta">consulta a ser cadastrada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Post(Consulta consulta)
         {
             try
@@ -110,6 +111,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="id">Id da consulta a ser buscada</param>
         /// <returns>retorna a consulta buscada</returns>
         [HttpGet("{id}")]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult BuscarId(Guid id)
         {
             try
@@ -130,6 +132,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="consulta">Corpo da consulta a ser atualizada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Atualizar(Guid id, Consulta consulta) 
         {
             try

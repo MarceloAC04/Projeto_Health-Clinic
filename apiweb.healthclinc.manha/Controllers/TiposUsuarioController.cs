@@ -23,6 +23,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="tiposUsuario">Novo tipo usuário a ser cadastrado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Post(TiposUsuario tiposUsuario)
         {
             try
@@ -44,6 +45,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// </summary>
         /// <returns>Retorna uma lista de todos os tipos usuários cadastardos</returns>
         [HttpGet]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Get()
         {
             try
@@ -66,6 +68,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="id">Id do tipo usuário a ser deletado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpDelete]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Delete(Guid id)
         {
             try
@@ -88,6 +91,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="tiposUsuario">Corpo do tipo usuário a ser cadastrado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Put(Guid id, TiposUsuario tiposUsuario)
         {
             try

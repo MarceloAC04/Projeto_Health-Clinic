@@ -24,6 +24,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="clinica">nova clinica a ser cadastrada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Post(Clinica clinica)
         {
             try
@@ -46,6 +47,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="id">Id da clínica a ser deletada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpDelete]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Deletar(Guid id)
         {
             try
@@ -66,6 +68,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// </summary>
         /// <returns>Retorna uma lista contendo todas as clínicas cadastradas</returns>
         [HttpGet]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Lista()
         {
             try
@@ -88,6 +91,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="clinica">Corpo da clínica a ser atualizada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Atualizar (Guid id, Clinica clinica)
         {
             try

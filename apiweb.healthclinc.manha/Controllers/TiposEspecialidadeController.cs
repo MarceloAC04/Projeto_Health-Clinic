@@ -23,6 +23,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="tiposEspecialidade">Tipo de especialidade a ser cadastrada</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Post(TiposEspecialidade tiposEspecialidade)
         {
             try

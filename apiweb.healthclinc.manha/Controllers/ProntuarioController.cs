@@ -23,6 +23,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="prontuario">novo prontuário a ser cadastrado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Medico")]
         public IActionResult Cadastrar(Prontuario prontuario)
         {
             try
@@ -44,6 +45,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="id">Id do prontuário a ser buscado</param>
         /// <returns>Retorna o prontuário encontrado</returns>
         [HttpGet]
+        //[Authorize(Roles = "Administrador, Medico")]
         public IActionResult BuscarId(Guid id)
         {
             try
@@ -64,6 +66,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="prontuario">corpo do prontuário a ser atualizado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPut]
+        //[Authorize(Roles = "Medico")]
         public IActionResult Atualizar(Guid id, Prontuario prontuario)
         {
             try

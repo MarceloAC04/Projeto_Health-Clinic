@@ -24,6 +24,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="statusConsulta">Status de consulta a ser cadastrado</param>
         /// <returns>StatusCode(201) Success</returns>
         [HttpPost]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Cadastrar(StatusConsulta statusConsulta)
         {
             try

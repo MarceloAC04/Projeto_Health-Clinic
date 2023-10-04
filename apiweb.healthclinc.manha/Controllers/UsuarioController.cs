@@ -46,6 +46,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="id">Id do usuário a ser buscado</param>
         /// <returns>Retorna o usuário encontrado</returns>
         [HttpGet]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Get(Guid id)
         {
             try
@@ -68,6 +69,7 @@ namespace apiweb.healthclinc.manha.Controllers
         /// <param name="senha">Senha do usuário a ser buscado</param>
         /// <returns>Retorna o usuário encontrado</returns>
         [HttpGet("EmaileSenha")]
+        //[Authorize(Roles = "Administrador")]
         public IActionResult Get(string email, string senha)
         {
             try
